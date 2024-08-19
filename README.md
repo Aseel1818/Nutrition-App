@@ -17,6 +17,7 @@ A powerful and personalized nutrition app designed to create customized diet pla
 - **Result-driven**: The collected data is analyzed to offer a personalized diet plan that suits individual needs.
 
 ## 🛠️ Tech Stack
+- **Architecture**: MVVM (Model-View-ViewModel)
 - **Frontend**: Xamarin
 - **Backend**: Azure Cosmos DB with MongoDB API
 
