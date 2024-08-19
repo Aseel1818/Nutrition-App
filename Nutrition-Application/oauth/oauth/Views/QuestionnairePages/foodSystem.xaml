@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="oauth.Views.QuestionnairePages.foodSystem"
+             BackgroundImageSource="systemB.png">
+    <ContentPage.Content>
+        <StackLayout Padding="0,60,0,0" VerticalOptions="CenterAndExpand">
+
+                <Grid  >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Image  HeightRequest="130" WidthRequest="130"
+                                   Source="nutsHome.png"
+                                   HorizontalOptions="Center"/>
+                    <Label FontFamily="NSA"
+                                Text="نظام &#10;الغذاء المتبع" 
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                TextColor="White" 
+                                FontSize="15"/>
+
+
+                </Grid>
+
+                <StackLayout Padding="30"  HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0,30,0,0">
+                        <CollectionView    x:Name="myCollectionView" SelectionMode="Single" SelectionChanged="myCollectionView_SelectionChanged" >
+                            <CollectionView.ItemsLayout >
+                                <GridItemsLayout Orientation="Vertical" Span="2" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate >
+
+                                <DataTemplate  >
+                            <Frame BackgroundColor="Transparent" Margin="10,10,10,10">
+                                <StackLayout Orientation="Vertical">
+                                    <Image Source="{Binding QuestionnairImage}" HeightRequest="120" WidthRequest="150"/>
+                                    <Label FontFamily="NSAB" FontSize="Medium" HorizontalOptions="Center"   TextColor="#335380"  Text="{Binding QuestionnairName}"/>
+                                  
+                                </StackLayout>
+                            </Frame>
+
+                                    
+
+
+
+
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                    </StackLayout>
+
+                   
+
+                    <Button BackgroundColor="#335380" Text="متابعة" FontFamily="NSA"  FontSize="Medium" Margin="20,0,20,10" HeightRequest="50" CornerRadius="15" TextColor="White"  Clicked="Button_Clicked"></Button>
+
+            <StackLayout Padding="10,0,10,10" Orientation="Horizontal"  BackgroundColor="#335380" VerticalOptions="EndAndExpand" HorizontalOptions="Fill" HeightRequest="100"  Margin="0,0,0,0" >
+                <Grid>
+                    <Label Text="تخطي" 
+                                       FontFamily="NSA"
+                                       TextColor="White"
+                                      HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center"
+                                       FontSize="Medium">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="nextBtn" Tapped="nextBtn_Tapped" ></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+
+                <Label TextColor="White" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center"  VerticalOptions="CenterAndExpand" Text="99%"></Label>
+                
+
+            </StackLayout>
+
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

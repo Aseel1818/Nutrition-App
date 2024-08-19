@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="oauth.Views.RegisterPage" 
+             xmlns:local="clr-namespace:oauth"
+             BackgroundImageSource="back.png">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Line></Line>
+            <Line></Line>
+            <Line></Line>
+
+
+
+            <Image Grid.Row="0" Grid.Column="0" Source="wlogo.png" Margin="0,10"></Image>
+
+
+            <Grid>
+                <StackLayout Grid.Row="0" Grid.Column="0" Padding="15" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,80">
+
+
+                    <StackLayout Margin="0,0">
+                        <Grid ColumnSpacing="0" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+                            <Button  Grid.Column="0" Grid.Row="0" TextColor="#335380"  FontSize="Small" FontFamily="NSA"
+                                BackgroundColor="White" VerticalOptions="FillAndExpand"
+                                WidthRequest="150"  Text="تسجيل الدخول " Clicked="login_Button"  HorizontalOptions="FillAndExpand">
+
+                            </Button>
+                            <Button Grid.Column="1" Grid.Row="0" TextColor="White"  FontSize="Small" FontFamily="NSA"
+                                BackgroundColor="#335380" VerticalOptions="FillAndExpand" WidthRequest="150"   
+                                Text="إنشاء حساب جديد " Clicked="create_Account_Button" HorizontalOptions="FillAndExpand">
+
+                            </Button>
+                        </Grid>
+
+                    </StackLayout>
+
+                    <StackLayout  Margin="20,10" >
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Margin="0,1" BackgroundColor="White" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                                <StackLayout Orientation="Horizontal" HeightRequest="35"  WidthRequest="30" Padding="0" Margin="5">
+                                    <Entry FontSize="Small" x:Name="TxtName" Text="{Binding TheTask.Name}"
+                           HorizontalOptions="FillAndExpand" Margin="10,0,10,0">
+                                    </Entry>
+                                </StackLayout>
+                            </Frame>
+                            <Label Text="اسم المستخدم    " FontSize="15" FontAttributes="Bold" TextColor="#335380" VerticalOptions="Center"></Label>
+                        </StackLayout>
+
+
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Margin="0,1" BackgroundColor="White" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                                <StackLayout Orientation="Horizontal" HeightRequest="35" WidthRequest="30" Padding="0" Margin="5">
+                                    <Entry FontSize="Small" x:Name="TxtEmail" Text="{Binding TheTask.Email}" 
+                           HorizontalOptions="FillAndExpand" Margin="10,0,10,0">
+
+                                    </Entry>
+
+                                </StackLayout>
+                            </Frame>
+                            <Label Text="البريد الالكتروني" FontSize="15" FontAttributes="Bold" TextColor="#335380" VerticalOptions="Center"></Label>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Margin="0,1" BackgroundColor="White" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                                <StackLayout Orientation="Horizontal" HeightRequest="35" WidthRequest="30" Padding="0" Margin="5">
+
+
+                                    <Entry FontSize="Small" x:Name="TxtPassword" Text="{Binding TheTask.Password}"
+                                           HorizontalOptions="FillAndExpand" Margin="10,0,10,0" Placeholder="ادخل هنا" IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger } , Path=HidePassword}"/>
+
+                                    <ImageButton BackgroundColor="Transparent" Margin="0,0,10,0" VerticalOptions="Center" HeightRequest="30" Source="eyehidden">
+                                        <ImageButton.Triggers>
+                                            <EventTrigger Event="Clicked">
+                                                <local:ShowPasswordTrigger ShowIcon="eye"
+                                                   HideIcon="eyehidden"
+                                                   x:Name="ShowPasswordActualTrigger"/>
+
+                                            </EventTrigger>
+                                        </ImageButton.Triggers>
+                                    </ImageButton>
+                                </StackLayout>
+
+                            </Frame>
+                            <Label Text="كلمة السر          " FontSize="15" FontAttributes="Bold" TextColor="#335380" VerticalOptions="Center"></Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Margin="0,1" BackgroundColor="White" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="20">
+
+                                <StackLayout Orientation="Horizontal" HeightRequest="35" WidthRequest="30" Padding="0" Margin="5">
+
+
+
+                                    <Entry  IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger2 } , Path=HidePassword}"  FontSize="Small" x:Name="TxtConfirmPass" 
+                           HorizontalOptions="FillAndExpand" Margin="10,0,10,0"></Entry>
+
+                                    <ImageButton BackgroundColor="Transparent" Margin="0,0,10,0" VerticalOptions="Center" HeightRequest="30" Source="eyehidden">
+                                        <ImageButton.Triggers>
+                                            <EventTrigger Event="Clicked">
+                                                <local:ShowPasswordTrigger ShowIcon="eye"
+                                                   HideIcon="eyehidden"
+                                                   x:Name="ShowPasswordActualTrigger2"/>
+
+                                            </EventTrigger>
+                                        </ImageButton.Triggers>
+                                    </ImageButton>
+
+
+                                </StackLayout>
+                            </Frame>
+                            <Label Text="  تأكيد كلمة السر" FontSize="15" FontAttributes="Bold" TextColor="#335380" VerticalOptions="Center"></Label>
+                        </StackLayout>
+
+
+
+
+
+
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+                        <StackLayout  Orientation="Vertical" Margin="70,0,70,0">
+                            <Button 
+                            BackgroundColor="#268080"
+                        FontFamily="NSA"
+                        TextColor="White"
+                            HeightRequest="40"
+                            BorderWidth="1.5"
+                            CornerRadius="10"
+                            Text="إنشاء حساب" x:Name="BtnSignIn"
+                            Clicked="Button_Clicked"    
+                            FontSize="Small"
+                            
+                            />
+
+
+                        </StackLayout>
+                        <Image Margin="0,10" Source="line.png" HorizontalOptions="FillAndExpand" ></Image>
+
+                        <StackLayout Orientation="Vertical" Margin="70,0,70,50">
+                            <Button
+                        TextColor="White"
+                        BackgroundColor="#B90A00"
+                        HeightRequest="40"
+                        BorderWidth="1.5"
+                        
+                        FontFamily="NSA"
+                                
+                                
+                        Clicked="ButtonGoogle_Clicked"     
+                                    
+                            CornerRadius="10"
+                          
+                            FontSize="Small"
+                            Text="جيميل" x:Name="btnGmail"></Button>
+                            <Button BackgroundColor="#335380"
+                            HeightRequest="40"
+                            BorderWidth="1.5"
+                            CornerRadius="10"
+                            TextColor="White"
+                            FontFamily="NSA"
+                            FontSize="Small"
+                            Text="فيسبوك" x:Name="BtnFacebook" ></Button>
+
+                            
+
+
+                        </StackLayout>
+
+
+                    </StackLayout>
+
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

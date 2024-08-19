@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="oauth.Views.StartPage"
+              BackgroundImageSource="Asset.png">
+    <ContentPage.Content >
+        <StackLayout >
+                <Grid>
+                <StackLayout Grid.Row="1">
+
+                    <Image x:Name="imgLogo"  Source="logo.png" Margin="0,20" />
+
+
+            </StackLayout>
+            </Grid>
+
+
+            <StackLayout>
+
+                <Label Grid.Row="1" Grid.Column="0"  VerticalOptions="Center" FontSize="45"  VerticalTextAlignment="Center" Margin="0,150"
+                   HorizontalTextAlignment="Center" FontAttributes="Bold" >
+                    <Label.FormattedText>
+                        <FormattedString >
+                            <Span Text="أهلا بك &#10;في حياة&#10;أكثر جمالا" TextColor="#268080"
+                              FontFamily="NSA"   FontSize="47"  
+                              FontAttributes="Bold" />
+
+
+                            <Span Text="&#10;وأكثر راحة"
+                          x:Name="firstStr"
+                          TextColor="#ff8075"
+                              FontFamily="NSA"   FontSize="47"  
+                              FontAttributes="Bold">
+                            </Span>
+
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+            </StackLayout>
+
+
+
+
+
+
+        </StackLayout>
+
+
+
+    </ContentPage.Content>
+</ContentPage>

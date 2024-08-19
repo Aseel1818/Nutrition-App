@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="oauth.Views.GoogleQuestionnairePages.vegetablesView">
+    <ContentPage.Content>
+        <Grid>
+            <Image WidthRequest="120" Margin="0,0,0,0" HorizontalOptions="FillAndExpand" Source="vigitableB.png" Aspect="AspectFill"></Image>
+
+            <StackLayout>
+                <StackLayout 
+                Margin="0,20,0,0" >
+
+                    <Grid x:Name="txt">
+
+                        <StackLayout  VerticalOptions="EndAndExpand" >
+                            <Image  Grid.Row="0" Source="logoLable.png" HeightRequest="110" WidthRequest="100"></Image>
+                        </StackLayout>
+                        <Label Grid.Row="0" HorizontalOptions="Center" FontAttributes="Bold"  VerticalOptions="End"  Text="الخضار" TextColor="White"  FontSize="Medium" Margin="0,24,0,0" FontFamily="NSA" ></Label>
+
+                    </Grid>
+
+                    <Grid>
+                        <StackLayout Grid.Row="0" VerticalOptions="Center" Padding="70 , 50 , 70 , 50 ">
+                            <Label HorizontalOptions="Center"  Margin="0,0,0,5">
+                                <Label.FormattedText>
+                                    <FormattedString  >
+                                        <Span Text="اختر الخضار التي تود ادراجها في نظامك الغذائي &#10;" TextColor="Black"
+                              FontFamily="NSAB" FontSize="13"  
+                              FontAttributes="Bold" />
+                                        <Span  Text="                ( يمكنك اختيار اكثر من نوع ) "
+                          TextColor="Black" FontSize="13" 
+                              FontFamily="NSAB" >
+                                        </Span>
+
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <CollectionView    x:Name="myCollectionView" SelectionMode="Multiple" SelectionChanged="myCollectionView_SelectionChanged" >
+                                <CollectionView.ItemsLayout >
+                                    <GridItemsLayout Orientation="Vertical" Span="2" />
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemTemplate >
+
+                                    <DataTemplate >
+                                        <Frame Padding="5" BackgroundColor="Transparent" x:Name="TxtF"   CornerRadius="15" HeightRequest="120"  >
+                                            <Frame CornerRadius="10"  Padding="0,5,0,0" HorizontalOptions="Center" VerticalOptions="FillAndExpand"  BackgroundColor="#268080">
+                                                <Grid ColumnSpacing="0"   BackgroundColor="Transparent">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Image Source="{Binding QuestionnairImage}" HeightRequest="80" WidthRequest="150"/>
+                                                    <Label HorizontalOptions="Center" VerticalOptions="EndAndExpand"  TextColor="White" FontFamily="NSA" Text="{Binding QuestionnairName}" Margin="0,0,0,5" FontSize="15"/>
+
+                                                </Grid>
+
+                                            </Frame>
+                                        </Frame>
+
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                            <Button BackgroundColor="#268080" CornerRadius="15" Text="خيارات أخرى مثل ..." FontFamily="NSA" FontSize="14" TextColor="White"></Button>
+
+                        </StackLayout>
+
+                    </Grid>
+
+                    <Button BackgroundColor="#268080" Text="متابعة" FontFamily="NSA"  FontSize="Medium" Margin="20,0,20,10" HeightRequest="50" CornerRadius="15" TextColor="White"   Clicked="Button_Clicked"></Button>
+
+                    <StackLayout Padding="10,0,10,10" Orientation="Horizontal"  BackgroundColor="#268080" VerticalOptions="EndAndExpand" HorizontalOptions="Fill" HeightRequest="100"  Margin="0,0,0,0" >
+                        <Grid>
+                            <Label Text="تخطي" 
+                                       FontFamily="NSA"
+                                       TextColor="White"
+                                      HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center"
+                                       FontSize="Medium">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="nextBtn" Tapped="nextBtn_Tapped" ></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+
+                        <Label TextColor="White" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center"  VerticalOptions="CenterAndExpand" Text="99%"></Label>
+                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray"  CornerRadius="25" >
+
+                                <Label Text="رجوع" 
+                                       FontFamily="NSA"
+                                       TextColor="White"
+                                     
+                                       FontSize="Medium"
+                                       x:Name="backBtn">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="BackBtn" Tapped="BackBtn_Tapped" ></TapGestureRecognizer>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Frame>
+
+                        </StackLayout>
+
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+
+        </Grid>
+
+    </ContentPage.Content>
+
+</ContentPage>

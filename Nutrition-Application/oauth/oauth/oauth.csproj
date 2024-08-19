@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Neo Sans Arabic Regular.ttf" />
+    <None Remove="Fonts\NeoSansArabic.ttf" />
+    <None Remove="Fonts\NeoSansArabicBlack.ttf" />
+    <None Remove="Fonts\NeoSansArabicBold.ttf" />
+    <None Remove="Fonts\NeoSansArabicLight.ttf" />
+    <None Remove="Fonts\NeoSansArabicMedium.ttf" />
+    <None Remove="Fonts\NeoSansArabicUltra.ttf" />
+    <None Remove="Fonts\Neo_Sans_Medium.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\Neo Sans Arabic Regular.ttf" />
+    <EmbeddedResource Include="Fonts\NeoSansArabic.ttf" />
+    <EmbeddedResource Include="Fonts\NeoSansArabicBlack.ttf" />
+    <EmbeddedResource Include="Fonts\NeoSansArabicBold.ttf" />
+    <EmbeddedResource Include="Fonts\NeoSansArabicLight.ttf" />
+    <EmbeddedResource Include="Fonts\NeoSansArabicMedium.ttf" />
+    <EmbeddedResource Include="Fonts\NeoSansArabicUltra.ttf" />
+    <EmbeddedResource Include="Fonts\Neo_Sans_Medium.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CardsView" Version="2.8.1" />
+    <PackageReference Include="MongoDB.Driver" Version="2.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Plugin.GoogleClient" Version="2.1.16-beta" />
+    <PackageReference Include="Xamarin.Auth" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\GoogleQuestionnairePages\Fruits.xaml.cs">
+      <DependentUpon>Fruits.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\GoogleQuestionnairePages\TargetViewMale.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="Views\QuestionnairePages\Fruits.xaml.cs">
+      <DependentUpon>Fruits.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\QuestionnairePages\TargetViewMale.xaml.cs">
+      <DependentUpon>TargetViewMale.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

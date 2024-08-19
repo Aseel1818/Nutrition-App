@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="oauth.Views.GoogleQuestionnairePages.Measurements"
+             BackgroundImageSource="MB.png">
+    <ContentPage.Content>
+        <Grid Margin="0,0,0,0">
+
+            <Image WidthRequest="120" Margin="0,0,0,0" HorizontalOptions="FillAndExpand" Source="MB2.png" Aspect="AspectFill"></Image>
+
+            <StackLayout >
+                <Grid Padding="20,40,0,0" VerticalOptions="Center" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Image  HeightRequest="250" WidthRequest="212"
+                                   Source="MH.png"
+                                   HorizontalOptions="Center"/>
+                    <Label FontFamily="NSA"
+                                Text="القياسات"  Margin="0,0,30,0"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                TextColor="White" 
+                                FontSize="16"/>
+                </Grid>
+                <StackLayout Padding="40">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame  BackgroundColor="White" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="15">
+                            <StackLayout Orientation="Horizontal" HeightRequest="35" WidthRequest="30" Padding="0" Margin="5">
+                                <Entry Placeholder="العمر بالسنوات" PlaceholderColor="Gray" FontSize="Medium" TextColor="#335380" FontFamily="NSA" x:Name="TxtAge" 
+                           HorizontalOptions="FillAndExpand" Margin="10,0,10,0"></Entry>
+
+                            </StackLayout>
+                        </Frame>
+                        <Frame CornerRadius="15">
+                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+                                <Label FontFamily="NSA" TextColor="Black" HorizontalOptions="End" VerticalOptions="Center" Text="العمر"></Label>
+
+
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Frame  BackgroundColor="White" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="15">
+                            <StackLayout Orientation="Horizontal" HeightRequest="35" WidthRequest="30" Padding="0" Margin="5">
+                                <Entry Placeholder="الوزن بالكيلو" PlaceholderColor="Gray" FontSize="Medium" TextColor="#335380" FontFamily="NSA" x:Name="TxtWeight" 
+                           HorizontalOptions="FillAndExpand" Margin="10,0,10,0"></Entry>
+
+                            </StackLayout>
+                        </Frame>
+                        <Frame CornerRadius="15">
+                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+                                <Label FontFamily="NSA" TextColor="Black" HorizontalOptions="End" VerticalOptions="Center" Text="الوزن"></Label>
+
+
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Frame  BackgroundColor="White" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="15">
+                            <StackLayout Orientation="Horizontal" HeightRequest="35" WidthRequest="30" Padding="0" Margin="5">
+                                <Entry Placeholder="الطول بالسنتيميتر" PlaceholderColor="Gray" FontSize="Medium" TextColor="#335380" FontFamily="NSA" x:Name="TxtHeight" 
+                           HorizontalOptions="FillAndExpand" Margin="10,0,10,0"></Entry>
+
+                            </StackLayout>
+                        </Frame>
+                        <Frame CornerRadius="15">
+                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+                                <Label TextColor="Black" FontFamily="NSA" HorizontalOptions="End" VerticalOptions="Center" Text="الطول"></Label>
+
+
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+
+
+                </StackLayout>
+
+
+
+
+                <StackLayout Padding="40,0,40,0">
+                    <Button   BackgroundColor="#335380" Text="متابعة" FontFamily="NSA"  FontSize="Medium" Margin="0,0,0,0" HeightRequest="50" CornerRadius="15" TextColor="White"  Clicked="Button_Clicked"></Button>
+                </StackLayout>
+            </StackLayout>
+
+
+
+            <StackLayout Padding="10,0,10,10" Orientation="Horizontal"  BackgroundColor="#335380" VerticalOptions="EndAndExpand" HorizontalOptions="Fill" HeightRequest="100"  Margin="0,0,0,0" >
+                <Grid>
+                    <Label Text="تخطي" 
+                                       FontFamily="NSA"
+                                       TextColor="White"
+                                      HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center"
+                                       FontSize="Medium">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="nextBtn" Tapped="nextBtn_Tapped" ></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+
+                <Label TextColor="White" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center"  VerticalOptions="CenterAndExpand" Text="99%"></Label>
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Frame BackgroundColor="Transparent" BorderColor="DarkGray"  CornerRadius="25" >
+
+                        <Label Text="رجوع" 
+                                       FontFamily="NSA"
+                                       TextColor="White"
+                                     
+                                       FontSize="Medium"
+                                       x:Name="backBtn">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="BackBtn" Tapped="BackBtn_Tapped" ></TapGestureRecognizer>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Frame>
+
+                </StackLayout>
+
+            </StackLayout>
+        </Grid>
+
+
+    </ContentPage.Content>
+</ContentPage>

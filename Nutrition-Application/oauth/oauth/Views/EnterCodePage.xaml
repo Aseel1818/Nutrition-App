@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="oauth.Views.EnterCodePage"
+            BackgroundImageSource="updateBack.png" >
+    <ContentPage.Content>
+
+
+        <StackLayout>
+            <Label Text="تغيير كلمة المرور" HorizontalOptions="Center" Margin="40" FontFamily="NSAB" FontSize="Small" TextColor="White"></Label>
+            <StackLayout Margin="0,80">
+                <StackLayout Orientation="Vertical" Margin="20,0" >
+                    <Label HorizontalOptions="Center" Text="تم إرسال رمز التحقق الخاص بك إلى البريد الإلكتروني نرجو إدخاله" FontSize="Large" FontAttributes="Bold" TextColor="#268080" VerticalOptions="Center" FontFamily="NSAB"></Label>
+
+                    <Frame Margin="0,1" BackgroundColor="White" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                        <StackLayout Orientation="Vertical" HeightRequest="50" WidthRequest="30" Padding="0" Margin="5">
+
+
+
+                            <Entry x:Name="TxtCode"  Placeholder="اكتب هنا" FontSize="Large" TextColor="#268080"
+                           HorizontalOptions="FillAndExpand" Margin="10,0,10,0"></Entry>
+
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout >
+                <Grid >
+                    <Image Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" Source="updatesave.png"></Image>
+                    <Label Grid.Row="1" Text="تأكيد"
+                            FontFamily="NSAB"
+                           TextColor="White"
+                           HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                           FontSize="Medium"
+                           >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer   Tapped="ButtonSaveCode_Clicked"
+                                                  >
+
+                            </TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+
+                </Grid>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Grid.Row="1" Text="اعادة ارسال الرمز"
+                            FontFamily="NSAB"
+                           TextColor="#268080"
+                           HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                           FontSize="Small"
+                           >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer   Tapped="ButtonresendCode_Clicked"
+                                                  >
+
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+
+            <StackLayout  VerticalOptions="End" Margin="0,0,0,10" >
+                <Grid>
+                  
+
+
+                    <Frame  Grid.Row="2"  HorizontalOptions="EndAndExpand" BackgroundColor="Transparent" BorderColor="DarkGray"  CornerRadius="25" WidthRequest="40"  HeightRequest="50" Margin="0,0,10,0" >
+                        <Grid>
+                            <Label Text="رجوع" 
+                            FontFamily="NSA"
+                           TextColor="White"
+                          HorizontalOptions="Center"
+                          VerticalOptions="Center"
+                           FontSize="Small"
+                           x:Name="backBtn">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="BackBtn" Tapped="BackBtn_Tapped" ></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                    </Frame>
+
+                </Grid>
+
+
+
+
+            </StackLayout>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

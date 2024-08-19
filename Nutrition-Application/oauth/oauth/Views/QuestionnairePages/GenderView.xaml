@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="oauth.Views.QuestionnairePages.GenderView"
+             BackgroundImageSource="genderB.png">
+    <Grid>
+        <StackLayout >
+
+            <Grid>
+                <Label TextColor="#335380" Margin="0,200,0,0" HorizontalOptions="Center"
+                       VerticalOptions="Center" Text="   ساعدنا في معرفة المزيد عن &#10;   نفسك لكي نقوم بتقديم افضل&#10; خدمة لك عن  طريق الاجابة عن &#10;              الاسئلة التالية" FontFamily="NSAB" FontSize="Large"></Label>
+
+                <StackLayout Padding="30,0,30,0"  Grid.Row="1" VerticalOptions="EndAndExpand"  HorizontalOptions="Center" Orientation="Vertical"  >
+
+                    <CollectionView   x:Name="myCollectionView" SelectionMode="Single" SelectionChanged="myCollectionView_SelectionChanged" >
+                        <CollectionView.ItemsLayout >
+                            <GridItemsLayout Orientation="Vertical" Span="2" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate >
+
+                            <DataTemplate  >
+                                <Frame BackgroundColor="Transparent" Margin="0">
+                                    <StackLayout Orientation="Vertical">
+                                        <Image Source="{Binding QuestionnairImage}" HeightRequest="100" WidthRequest="150"/>
+                                        <Label FontFamily="NSAB" FontSize="Medium" HorizontalOptions="Center"   TextColor="#335380"  Text="{Binding QuestionnairName}"/>
+
+                                    </StackLayout>
+
+
+
+                                </Frame>
+
+
+
+
+
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    <StackLayout>
+                        <Button  Grid.Row="1" BackgroundColor="#335380" Text="متابعة" FontFamily="NSA"  FontSize="Medium" Margin="0,0,0,90" HeightRequest="50" CornerRadius="15" TextColor="White"  Clicked="Button_Clicked"    ></Button>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+
+
+
+            <StackLayout Padding="10,0,10,10" Orientation="Horizontal"  BackgroundColor="#335380" VerticalOptions="EndAndExpand" HorizontalOptions="Fill" HeightRequest="100"  Margin="0,0,0,0" >
+                <Grid>
+                    <Label Text="تخطي" 
+                                       FontFamily="NSA"
+                                       TextColor="White"
+                                      HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center"
+                                       FontSize="Medium">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="nextBtn" Tapped="nextBtn_Tapped" ></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+
+                <Label TextColor="White" HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center"  VerticalOptions="CenterAndExpand" Text="99%"></Label>
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Frame BackgroundColor="Transparent" BorderColor="DarkGray"  CornerRadius="25" >
+
+                        <Label Text="رجوع" 
+                                       FontFamily="NSA"
+                                       TextColor="White"
+                                     
+                                       FontSize="Medium"
+                                       x:Name="backBtn">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="BackBtn" Tapped="BackBtn_Tapped" ></TapGestureRecognizer>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Frame>
+
+                </StackLayout>
+
+            </StackLayout>
+
+
+
+        </StackLayout>
+
+    </Grid>
+
+
+</ContentPage>

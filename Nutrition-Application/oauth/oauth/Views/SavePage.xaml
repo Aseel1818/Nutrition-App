@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    x:Class="oauth.Views.SavePage"
+    
+    BackgroundImageSource="page1Back.png" >
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Line></Line>
+            <Line></Line>
+            <Line></Line>
+ 
+
+            <Grid>
+                <Image Grid.Row="0" Grid.Column="0" Source="wlogo.png" Margin="0,10"></Image>
+            </Grid>
+
+            <Grid>
+                <StackLayout Grid.Row="0" Grid.Column="0" Padding="15" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,70">
+
+
+                    <StackLayout >
+                        <Grid ColumnSpacing="0" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+                            <Button Grid.Column="0" Grid.Row="0" TextColor="White" FontSize="14" 
+                                BackgroundColor="#ff8075" VerticalOptions="FillAndExpand"
+                                WidthRequest="150"  Text="تسجيل الدخول " Clicked="login_Button"  HorizontalOptions="FillAndExpand">
+
+                            </Button>
+                            <Button Grid.Column="1" Grid.Row="0" TextColor="#335380"  FontSize="14"
+                                BackgroundColor="White" VerticalOptions="FillAndExpand" WidthRequest="150"   
+                                Text="إنشاء حساب جديد " Clicked="create_Account_Button" HorizontalOptions="FillAndExpand">
+
+                            </Button>
+                        </Grid>
+                    </StackLayout>
+
+                    <StackLayout  Margin="20,20" >
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Margin="0,1" BackgroundColor="White" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                                <StackLayout Orientation="Horizontal" HeightRequest="35"  WidthRequest="30" Padding="0" Margin="5">
+                                    <Entry FontSize="Small" x:Name="TxtName" Text="{Binding TheTask.Name}"
+                           HorizontalOptions="FillAndExpand" Margin="10,0,10,0">
+                                    </Entry>
+                                </StackLayout>
+                            </Frame>
+                            <Label Text="اسم المستخدم    " FontSize="15" FontAttributes="Bold" TextColor="#335380" VerticalOptions="Center"></Label>
+                        </StackLayout>
+
+                        
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Margin="0,1" BackgroundColor="White" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                                <StackLayout Orientation="Horizontal" HeightRequest="35" WidthRequest="30" Padding="0" Margin="5">
+                                    <Entry FontSize="Small" x:Name="TxtEmail" Text="{Binding TheTask.Email}" 
+                           HorizontalOptions="FillAndExpand" Margin="10,0,10,0">
+
+                                    </Entry>
+
+                                </StackLayout>
+                            </Frame>
+                            <Label Text="البريد الالكتروني" FontSize="15" FontAttributes="Bold" TextColor="#335380" VerticalOptions="Center"></Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Margin="0,1" BackgroundColor="White" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                                <StackLayout Orientation="Horizontal" HeightRequest="35" WidthRequest="30" Padding="0" Margin="5">
+
+
+
+                                    <Entry IsPassword="True" FontSize="Small" x:Name="TxtPassword" Text="{Binding TheTask.Password}"
+                           HorizontalOptions="FillAndExpand" Margin="10,0,10,0"></Entry>
+
+                                </StackLayout>
+                            </Frame>
+                            <Label Text="كلمة السر          " FontSize="15" FontAttributes="Bold" TextColor="#335380" VerticalOptions="Center"></Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Margin="0,1" BackgroundColor="White" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                                <StackLayout Orientation="Horizontal" HeightRequest="35" WidthRequest="30" Padding="0" Margin="5">
+
+
+
+                                    <Entry  FontSize="Small" x:Name="TxtConfirmPass" 
+                           HorizontalOptions="FillAndExpand" Margin="10,0,10,0"></Entry>
+
+                                </StackLayout>
+                            </Frame>
+                            <Label Text="  تأكيد كلمة السر" FontSize="15" FontAttributes="Bold" TextColor="#335380" VerticalOptions="Center"></Label>
+                        </StackLayout>
+
+
+
+
+                        <Button 
+                            BackgroundColor="#268080"
+                            Margin="25,10"
+                            HeightRequest="40"
+                            BorderWidth="1.5"
+                            CornerRadius="10"
+                          
+                            FontSize="Small"
+                            Text="إنشاء حساب" x:Name="BtnSignIn"
+                            Clicked="Button_Clicked"    
+                            Command="{Binding SaveCommand}"
+                           
+                        
+                            />
+
+                        <Grid>
+                            <StackLayout Orientation="Vertical">
+                                <Image Source="line.png"></Image>
+
+
+
+                                <Button BackgroundColor="#335380"
+                            Margin="25,10"
+                            HeightRequest="40"
+                            BorderWidth="1.5"
+                            CornerRadius="10"
+                          
+                            FontSize="Small"
+                            Text="فيسبوك" x:Name="BtnFacebook" ></Button>
+                                <Button
+                                BackgroundColor="#B90A00"
+                            Margin="25,10"
+                            HeightRequest="40"
+                            BorderWidth="1.5"
+                            CornerRadius="10"
+                          
+                            FontSize="Small"
+                            Text="جيميل" x:Name="btnGmail"
+                                ></Button>
+                                <Label FontSize="13" Text="لديك حساب؟ سجل الدخول الان"
+                            
+                           TextColor="#268080"
+                           HorizontalOptions="Center"
+                           
+                           x:Name="lblRegister">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="registerTap"
+                                              >
+
+                                        </TapGestureRecognizer>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </StackLayout>
+                        </Grid>
+
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
