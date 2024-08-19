@@ -26,26 +26,34 @@ Here are some key features of the app:
 
 ### Authentication Process
 1. **Signup Screen**  
-   ![Signup Screen](path_to_signup_screenshot)
+   <img src="ScreenShots/SignUp.jpeg" alt="Signup Screen" width="300">
 
 2. **Login Screen**  
-   ![Login Screen](ScreenShots/Login.jpeg)
+   <img src="ScreenShots/Login.jpeg" alt="Login Screen" width="300">
 
 3. **Forgot Password Screen**  
-   ![Forgot Password Screen](path_to_forgot_password_screenshot)
+   <img src="ScreenShots/EmailToChangePassword.jpeg" alt="Forgot Password Screen" width="300">
+   <img src="ScreenShots/Code.jpeg" alt="Forgot Password Screen" width="300">
+   <img src="ScreenShots/ResetPassword.jpeg" alt="Forgot Password Screen" width="300">
+
 
 ### Questionnaire Flow
 4. **Questionnaire Introduction**  
-   ![Questionnaire Introduction](path_to_questionnaire_intro_screenshot)
+   <img src="ScreenShots/Diet.jpeg" alt="Questionnaire Introduction" width="300">
 
 5. **Question Input Screen 1**  
-   ![Question Input Screen 1](path_to_question_input1_screenshot)
+   <img src="ScreenShots/Gender.jpeg" alt="Question Input Screen 1" width="300">
 
 6. **Question Input Screen 2**  
-   ![Question Input Screen 2](path_to_question_input2_screenshot)
+   <img src="ScreenShots/Mesurments.jpeg" alt="Question Input Screen 2" width="300">
 
-7. **Diet Plan Result Screen**  
-   ![Diet Plan Result Screen](path_to_diet_plan_result_screenshot)
+7. **Question Input Screen 3**  
+   <img src="ScreenShots/Lactos.jpeg" alt="Question Input Screen 3" width="300">
+   
+7. **Question Input Screen 4**  
+   <img src="ScreenShots/Water.jpeg" alt="Question Input Screen 4" width="300">
+
+
 
 ## 💡 How It Works
 1. **User Signup/Login**: Users can sign up or log in via Google or email/password.
