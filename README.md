@@ -29,7 +29,7 @@ Here are some key features of the app:
    ![Signup Screen](path_to_signup_screenshot)
 
 2. **Login Screen**  
-   ![Login Screen](path_to_login_screenshot)
+   ![Login Screen](ScreenShots/Login.jpeg)
 
 3. **Forgot Password Screen**  
    ![Forgot Password Screen](path_to_forgot_password_screenshot)
